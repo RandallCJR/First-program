@@ -1,0 +1,35 @@
+# importing the math module to compute the amount of paint needed
+import math
+
+# Dictionary of paint colors and cost per gallon
+paintColors = {
+   'red': 35,
+   'blue': 25,
+   'green': 23
+}
+
+# Calculate and output wall area using the input form the user
+wallHeight = float(input('Enter wall height (feet): \n'))
+wall_width = float(input('Enter wall width (feet): \n'))
+wall_area = wallHeight * wall_width
+print('Wall area:', wall_area , 'square feet' )
+
+# printing the amount of cans needed based on the users input
+gallon = 350
+paint_needed = float(wall_area / gallon)
+print('Paint needed:' , paint_needed , 'gallons')
+cans = math.ceil(paint_needed)
+print('Cans needed: %d can(s)\n' % cans)
+
+# printing the color chosen by the user and how much it will cost 
+# based off of the above calculations and input
+print('Choose a color to paint the wall: ')
+
+if input() == 'red':
+    print('Cost of purchasing', input(),  'paint:' , '$%d' % paintColors['red'] )
+else:
+    input() == 'blue'
+    print('cost of purchasing' , input(), 'paint' , '$%d' % paintColors['blue'] )
+
+
+
